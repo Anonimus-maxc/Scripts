@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Copiar Mensagens</title>
+  <style>
+    body {
+        height: 80vh;
+        background-color: #0C0C0C;
+    }
+    section {
+      display: flex;
+      padding-inline: 100px;
+      flex-direction: column;
+      align-items: center;
+    }
+    nav {
+      height: 80px;
+      background-color: #84DCC6;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    button {
+      height: 80px;
+      width: 100%;
+      display: block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #0C0C0C;
+      border: none;
+      cursor: pointer;
+      border-radius: 100px;
+    }
+    button:hover {
+      background-color: #ffffff;
+    }
+    a {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-decoration: none;
+      color: #0C0C0C;
+      font-weight: bold;
+    }
+    a:hover {
+        background-color: #579182;
+        padding: 5px 10px;
+        border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Script Inicial</a>
+    <a href="scriptInteresse.html">Script de Interesse</a>
+  </nav>
+
+  <section>
+    <button onclick="copyText(`Legal demais saber do seu interesse! 😃 Funciona assim: você me passa o que quer no site, eu crio um protótipo para te dar uma base de como vai ficar, nesse processo pode fazer quantas alterações quiser, e só depois da sua aprovação eu desenvolvo a versão final.`)"><h1>Copiar Mensagem 1</h1></button>
+    <button onclick="copyText(`Entrego com documentação no projeto pra facilitar qualquer atualização no futuro. Uso tecnologias de ponta pra garantir um site rápido, moderno (se quiser) e com nota máxima nos testes de desempenho do PageSpeed (página desenvolvida pelo próprio Google)🚀.`)"><h1>Copiar Mensagem 2</h1></button>
+    <button onclick="copyText(`Se quiser, podemos trocar contato, assim eu já te mando meu portfólio e alguns sites que desenvolvi, assim você já vê a qualidade do meu trabalho 😉.`)"><h1>Copiar Mensagem 3</h1></button>
+  </section>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => window.alert("Texto copiado!"))
+        .catch(() => window.alert("Erro ao copiar o texto."));
+    }
+  </script>
+
+</body>
+</html>
