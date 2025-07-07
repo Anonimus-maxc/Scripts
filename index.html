@@ -63,6 +63,11 @@
     <button onclick="copyText(`Um site bem feito pode multiplicar seus clientes em até 5x, além de passar ainda mais confiança. Essa semana estou com uma condição exclusiva pra criação de sites:\n • Rápidos\n• Modernos\n• E o melhor: totalmente focados em conversão!🚀`)"><h1>Copiar Mensagem 3</h1></button>
     <button onclick="copyText(`Posso te mostrar como funciona?`)"><h1>Copiar Mensagem 4</h1></button>
   </section>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+    }
+  </script>
 
 </body>
 </html>
